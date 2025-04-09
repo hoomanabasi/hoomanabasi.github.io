@@ -1,197 +1,230 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="رزومه حرفه‌ای متخصص هوش مصنوعی و پردازش زبان طبیعی">
-    <meta name="keywords" content="هوش مصنوعی, NLP, یادگیری ماشین, رزومه">
-    
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="رزومه علی رضایی - متخصص هوش مصنوعی و NLP">
-    <meta property="og:description" content="رزومه حرفه‌ای با تمرکز بر پروژه‌های پردازش زبان طبیعی و یادگیری عمیق">
-    <meta property="og:image" content="https://example.com/thumbnail.jpg">
-    
-    <title>رزومه علی رضایی | متخصص هوش مصنوعی</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="رزومه حرفه‌ای متخصص هوش مصنوعی و پردازش زبان طبیعی">
+  <meta name="keywords" content="رزومه، هوش مصنوعی، NLP، پردازش زبان طبیعی، متخصص">
+  <meta name="author" content="متخصص هوش مصنوعی و NLP">
+  <title>رزومه من | متخصص هوش مصنوعی و NLP</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
 
-    <!-- Custom CSS -->
-    <style>
-        :root {
-            --primary-color: #2A9D8F;
-            --secondary-color: #264653;
-            --accent-color: #E9C46A;
-            --text-color: #2A2A2A;
-        }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Vazirmatn', sans-serif;
+    }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    body {
+      background: linear-gradient(to bottom, #101820, #1a1f2b);
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-        body {
-            font-family: 'Vazir', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
+    header {
+      padding: 2rem;
+      text-align: center;
+      background: #1f2734;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
 
-        /* Navigation Styles */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
+    header h1 {
+      font-size: 2rem;
+      color: #00e6e6;
+    }
 
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            padding: 1rem;
-        }
+    nav {
+      margin-top: 1rem;
+    }
 
-        .nav-links a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            margin: 0 1.5rem;
-            transition: color 0.3s ease;
-        }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 1rem;
+      transition: color 0.3s;
+    }
 
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
-            color: white;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
+    nav a:hover {
+      color: #00e6e6;
+    }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: url('data:image/svg+xml,...');
-            animation: rotate 20s linear infinite;
-        }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1s ease;
+    }
 
-        /* Sections */
-        section {
-            padding: 5rem 10%;
-            min-height: 100vh;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease;
-        }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-        section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    h2 {
+      font-size: 1.8rem;
+      color: #00e6e6;
+      margin-bottom: 1.5rem;
+    }
 
-        /* Skill Cards */
-        .skill-card {
-            background: white;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
+    .skills, .projects, .experience, .education, .contact {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            section {
-                padding: 3rem 5%;
-            }
-        }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-    </style>
+    ul li::before {
+      content: '✓';
+      color: #00e6e6;
+      margin-left: 10px;
+    }
+
+    .project {
+      margin-bottom: 1.5rem;
+    }
+
+    .project a {
+      color: #00e6e6;
+      text-decoration: underline;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 5px;
+      background: #2a2f3c;
+      color: white;
+    }
+
+    form button {
+      background: #00e6e6;
+      color: #000;
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: #00cccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #1f2734;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-links">
-            <a href="#about">درباره من</a>
-            <a href="#skills">مهارت‌ها</a>
-            <a href="#projects">پروژه‌ها</a>
-            <a href="#experience">سوابق</a>
-        </div>
+  <header>
+    <h1>رزومه متخصص هوش مصنوعی و NLP</h1>
+    <nav>
+      <a href="#about">درباره من</a>
+      <a href="#skills">مهارت‌ها</a>
+      <a href="#projects">پروژه‌ها</a>
+      <a href="#experience">تجربه کاری</a>
+      <a href="#education">تحصیلات</a>
+      <a href="#contact">تماس</a>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>علی رضایی</h1>
-            <p>متخصص هوش مصنوعی و پردازش زبان طبیعی</p>
-        </div>
-    </section>
-
-    <!-- About Section -->
+  <main>
     <section id="about">
-        <h2>درباره من</h2>
-        <p>متخصص با بیش از ۵ سال تجربه در توسعه سیستم‌های هوش مصنوعی و پردازش زبان طبیعی...</p>
+      <h2>درباره من</h2>
+      <p>من یک متخصص هوش مصنوعی و پردازش زبان طبیعی با تجربه چندین ساله در طراحی، پیاده‌سازی و بهینه‌سازی مدل‌های یادگیری ماشین، زبان‌شناسی رایانشی، و سامانه‌های هوشمند هستم.</p>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>مهارت‌های تخصصی</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>پردازش زبان طبیعی</h3>
-                <p>توسعه مدل‌های Transformer - پردازش متن فارسی</p>
-            </div>
-            <!-- More skill cards -->
-        </div>
+    <section id="skills" class="skills">
+      <h2>مهارت‌ها</h2>
+      <ul>
+        <li>یادگیری ماشین (Scikit-learn, XGBoost)</li>
+        <li>یادگیری عمیق (TensorFlow, PyTorch)</li>
+        <li>پردازش زبان طبیعی (spaCy, Transformers, BERT)</li>
+        <li>تحلیل داده و مصورسازی (Pandas, Matplotlib, Seaborn)</li>
+        <li>برنامه‌نویسی پایتون، جاوا اسکریپت</li>
+        <li>کار با پایگاه‌های داده (SQL, MongoDB)</li>
+      </ul>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>پروژه‌های برجسته</h2>
-        <div class="project">
-            <h3>سیستم تحلیل احساسات فارسی</h3>
-            <p>توسعه مدل مبتنی بر BERT برای تحلیل احساسات متن فارسی</p>
-            <a href="#">مشاهده در گیت‌هاب</a>
-        </div>
+    <section id="projects" class="projects">
+      <h2>پروژه‌ها</h2>
+      <div class="project">
+        <h3>مدل تشخیص احساسات فارسی</h3>
+        <p>طراحی و آموزش یک مدل BERT برای تشخیص احساسات در متون فارسی. <a href="#">مشاهده در گیت‌هاب</a></p>
+      </div>
+      <div class="project">
+        <h3>سیستم پاسخ‌گوی هوشمند به سوالات</h3>
+        <p>استفاده از مدل‌های ترنسفورمر برای پاسخ‌دهی خودکار به سوالات کاربران. <a href="#">دموی پروژه</a></p>
+      </div>
     </section>
 
-    <script>
-        // Intersection Observer for scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
+    <section id="experience" class="experience">
+      <h2>تجربه کاری</h2>
+      <ul>
+        <li>متخصص NLP در شرکت داده‌پردازی هوشمند (۱۴۰۰ - تاکنون)</li>
+        <li>پژوهشگر یادگیری ماشین در مرکز تحقیقات هوش مصنوعی دانشگاه شریف (۱۳۹۸ - ۱۴۰۰)</li>
+      </ul>
+    </section>
 
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
+    <section id="education" class="education">
+      <h2>تحصیلات</h2>
+      <ul>
+        <li>کارشناسی ارشد هوش مصنوعی - دانشگاه صنعتی شریف</li>
+        <li>کارشناسی علوم کامپیوتر - دانشگاه تهران</li>
+      </ul>
+    </section>
 
-        // Smooth scroll for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <section id="contact" class="contact">
+      <h2>تماس با من</h2>
+      <form onsubmit="handleSubmit(event)">
+        <input type="text" name="name" placeholder="نام کامل" required>
+        <input type="email" name="email" placeholder="ایمیل" required>
+        <textarea name="message" rows="5" placeholder="پیام شما" required></textarea>
+        <button type="submit">ارسال</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© تمامی حقوق محفوظ است - ۱۴۰۴</p>
+  </footer>
+
+  <script>
+    // انیمیشن اسکرول
+    const sections = document.querySelectorAll('section');
+    window.addEventListener('scroll', () => {
+      sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          sec.classList.add('show');
+        }
+      });
+    });
+
+    // ارسال فرم (بدون بک‌اند واقعی)
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert('پیام شما ارسال شد! با تشکر.');
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>
