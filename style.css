@@ -1,366 +1,195 @@
-/* css/style.css */
-
-/* --- تنظیمات پایه و متغیرهای رنگی (تم تیره) --- */
+/* متغیرهای CSS برای مدیریت بهتر رنگ‌ها و فونت‌ها */
 :root {
-    /* پالت رنگی تیره */
-    --primary-color: #0D6EFD; /* آبی روشن‌تر برای کنتراست بهتر روی زمینه تیره - یا رنگ دلخواه دیگر */
-    --secondary-color: #6c757d; /* خاکستری میانه */
-    
-    --bg-color: #121212; /* پس‌زمینه اصلی بسیار تیره (نزدیک به مشکی) */
-    --card-bg: #1e1e1e; /* پس‌زمینه کمی روشن‌تر برای کارت‌ها و بخش‌ها */
-    --border-color: #333333; /* رنگ بوردرهای تیره */
-    
-    --text-color: #e0e0e0; /* رنگ متن اصلی روشن (خاکستری روشن) */
-    --text-color-secondary: #aaaaaa; /* رنگ متن ثانویه کمی تیره‌تر */
-    --heading-color: #ffffff; /* رنگ عناوین (سفید) */
-
-    --persian-font: 'Vazirmatn', sans-serif; /* فونت فارسی */
-
-    /* (اختیاری) رنگ‌های دیگر */
-    --link-hover-color: #4dabf7; /* رنگ هاور لینک‌ها */
-    --shadow-color: rgba(0, 0, 0, 0.5); /* رنگ سایه‌ها در تم تیره ممکن است کمتر دیده شود یا نیاز به تنظیم داشته باشد */
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f5f6fa;
+    --text-color: #2c3e50;
+    --border-color: #dcdde1;
+    --section-padding: 2rem;
+    --border-radius: 8px;
 }
 
+/* تنظیمات پایه و ریست */
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-    direction: rtl; 
+    box-sizing: border-box;
 }
 
 body {
-    font-family: var(--persian-font);
+    font-family: 'Vazirmatn', 'Tahoma', sans-serif;
     line-height: 1.6;
-    background-color: var(--bg-color); /* استفاده از پس‌زمینه تیره اصلی */
-    color: var(--text-color); /* استفاده از رنگ متن روشن اصلی */
-    text-align: right;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 2rem;
 }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 0 20px;
-    overflow: hidden; 
+/* کانتینر اصلی رزومه */
+.resume-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    overflow: hidden;
 }
 
-/* --- تنظیمات عمومی عناصر --- */
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 0.75rem;
-    color: var(--heading-color); /* رنگ عناوین */
+/* هدر رزومه */
+.resume-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--section-padding);
+    text-align: center;
+}
+
+.resume-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contact-info p {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* بخش‌های اصلی */
+section {
+    padding: var(--section-padding);
+    border-bottom: 1px solid var(--border-color);
+}
+
+section:last-child {
+    border-bottom: none;
 }
 
 h2 {
-   font-size: 2rem;
-   margin-bottom: 1rem;
-   padding-bottom: 0.5rem;
-   /* border-bottom: 3px solid var(--primary-color); */ /* در تم تیره شاید بهتر باشد حذف شود یا کمرنگ‌تر باشد */
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    position: relative;
 }
 
-h2 i { 
-    margin-left: 10px; 
-    color: var(--primary-color); 
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    width: 50px;
+    height: 3px;
+    background-color: var(--secondary-color);
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background: var(--border-color); /* بوردر تیره‌تر */
-    margin-bottom: 2rem;
+/* بخش مهارت‌ها */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
 }
 
-a {
-    color: var(--primary-color); /* رنگ لینک‌ها */
-    text-decoration: none;
+.skill-category h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
 }
 
-a:hover {
-    color: var(--link-hover-color); /* رنگ هاور لینک */
-    opacity: 1; /* جلوگیری از تداخل با hover عمومی */
-}
-
-ul {
+.skill-category ul {
     list-style: none;
 }
 
-img {
-    max-width: 100%; 
+.skill-category li {
+    margin-bottom: 0.5rem;
+    padding-right: 1.5rem;
+    position: relative;
 }
 
-/* --- دکمه‌ها (ممکن است نیاز به تنظیم رنگ متن داشته باشند) --- */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: inherit;
-    transition: background-color 0.3s ease;
+.skill-category li::before {
+    content: '▹';
+    position: absolute;
+    right: 0;
+    color: var(--secondary-color);
 }
 
-.btn-primary {
-    background-color: var(--primary-color);
-    color: #fff; /* رنگ متن سفید روی دکمه اصلی */
+/* بخش تجربیات */
+.experience-item, .education-item, .project-item, .certification-item {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
 }
 
-.btn-primary:hover {
-    background-color: var(--link-hover-color); /* یا رنگ تیره‌تر/روشن‌تر دلخواه */
-    color: #fff; 
-    opacity: 1;
+.experience-item:hover, .education-item:hover, .project-item:hover, .certification-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.btn-secondary {
-    background-color: var(--secondary-color);
-    color: #fff; /* رنگ متن سفید روی دکمه ثانویه */
-}
-
-.btn-secondary:hover {
-     background-color: lighten(var(--secondary-color), 10%); /* کمی روشن‌تر */
-     color: #fff;
-     opacity: 1;
-}
-
-
-/* --- هدر و ناوبری --- */
-#header {
-    background: var(--card-bg); /* پس‌زمینه تیره برای هدر */
-    color: var(--text-color);
-    padding: 1rem 0;
-    position: fixed; 
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px var(--shadow-color); /* سایه تیره‌تر */
-    border-bottom: 1px solid var(--border-color); /* یک خط جداکننده ظریف */
-}
-
-#header .logo {
-    color: var(--heading-color); /* رنگ روشن‌تر برای لوگو/نام */
-}
-
-#header .nav-links a {
-    color: var(--text-color); /* رنگ متن لینک‌های منو */
-}
-
-#header .nav-links a:hover,
-#header .nav-links a.active { /* رنگ فعال/هاور لینک‌های منو */
-    color: var(--primary-color); 
-}
-
-#header .menu-toggle { 
-    color: var(--text-color); /* رنگ آیکون منوی موبایل */
-}
-
-/* منوی باز شده موبایل */
-#header .nav-links {
-    /* ... (کدهای قبلی برای display و position) ... */
-    background-color: var(--card-bg); /* پس زمینه تیره برای منوی باز شده */
-}
-
-
-/* --- بخش‌های محتوایی --- */
-main {
-    padding-top: 80px; 
-}
-
-.content-section {
-    padding: 60px 0;
-    /* پس‌زمینه پیش‌فرض body است (var(--bg-color)) */
-}
-
-.bg-light { /* حالا این کلاس، یک پس‌زمینه تیره *متفاوت* خواهد داشت */
-    background-color: var(--card-bg); 
-}
-
-/* --- بخش Hero --- */
-.hero-section {
-    /* پس‌زمینه با تصویر و لایه تیره */
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../assets/images/hero-bg.jpg') no-repeat center center/cover; /* لایه تیره‌تر */
-    color: #fff; /* متن سفید */
-    /* ... بقیه استایل‌های Hero ... */
-}
-/* اطمینان از رنگ مناسب متن‌های داخل Hero */
-.hero-section h1, 
-.hero-section h2, 
-.hero-section .tagline {
-    color: #fff;
-}
-
-
-/* --- درباره من --- */
-.profile-pic {
-    border: 5px solid var(--primary-color); /* رنگ بوردر عکس پروفایل */
-}
-.about-content p {
-    color: var(--text-color); /* اطمینان از رنگ متن */
-}
-
-
-/* --- مهارت‌ها --- */
-.skill-category h3 {
-    color: var(--primary-color); /* رنگ عنوان دسته مهارت */
-    border-bottom: 1px solid var(--border-color); /* بوردر تیره‌تر */
-}
-.skill-category ul li::before {
-    color: var(--primary-color); /* رنگ bullet point */
-}
-
-/* Skill Bars */
-.skill-bar {
-    background-color: var(--border-color); /* پس‌زمینه تیره برای نوار مهارت */
-    border-radius: 5px;
-    height: 10px; 
-    overflow: hidden;
-}
-.skill-level {
-    background-color: var(--primary-color); /* رنگ سطح مهارت */
-    height: 100%;
-    border-radius: 5px 0 0 5px; 
-}
-.skill-name {
-    color: var(--text-color); /* رنگ نام مهارت */
-}
-
-
-/* --- تجربه کاری (Timeline) --- */
-.timeline::before {
-    background: var(--primary-color); /* رنگ خط تایم‌لاین */
-}
-.timeline-item::before {
-    background: var(--bg-color); /* پس‌زمینه دایره همرنگ پس‌زمینه اصلی */
-    border: 3px solid var(--primary-color); /* بوردر دایره با رنگ اصلی */
-}
-.timeline-content {
-    background: var(--card-bg); /* پس‌زمینه تیره برای محتوای تایم‌لاین */
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid var(--border-color); /* بوردر تیره */
-     box-shadow: 0 3px 6px var(--shadow-color); /* سایه */
-}
-.timeline-content h3 {
-    color: var(--primary-color); /* رنگ عنوان شغل */
-}
-.timeline-content .company {
-    color: var(--text-color-secondary); /* رنگ شرکت/تاریخ */
-}
-.timeline-content ul {
-    padding-right: 20px; 
-    list-style: disc;
-    color: var(--text-color); /* رنگ متن لیست */
-}
-/* تغییر رنگ disc پیش‌فرض */
-.timeline-content ul li::marker {
-    color: var(--text-color-secondary); 
-}
-
-
-/* --- پروژه‌ها --- */
-.project-card {
-    background: var(--card-bg); /* پس‌زمینه تیره کارت */
-    border: 1px solid var(--border-color); /* بوردر تیره */
-    border-radius: 5px;
-    overflow: hidden; 
-    box-shadow: 0 3px 6px var(--shadow-color);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-/* هاور کارت پروژه */
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* سایه قوی‌تر در هاور */
-    border-color: var(--secondary-color); /* تغییر رنگ بوردر در هاور (اختیاری) */
-}
-
-.project-info h3 {
-    color: var(--primary-color); /* رنگ عنوان پروژه */
-}
-.project-info p {
-    color: var(--text-color); /* رنگ متن توضیحات */
-}
-
-
-/* --- تحصیلات --- */
-.education-item {
-    border-bottom: 1px dashed var(--border-color); /* بوردر نقطه‌چین تیره */
-}
-.education-item h3 {
-    color: var(--primary-color); /* رنگ عنوان مدرک */
-}
-.education-item .institution {
-    color: var(--text-color-secondary); /* رنگ نام موسسه */
-}
-
-
-/* --- تماس با من --- */
-.contact-info p {
-    font-size: 1.1rem;
-    color: var(--text-color); /* رنگ متن اطلاعات تماس */
-}
-.contact-info i {
-    color: var(--primary-color); /* رنگ آیکون‌ها */
-}
-.contact-info a { /* رنگ لینک‌های ایمیل و پروفایل‌ها */
+.experience-item h3, .education-item h3, .project-item h3 {
     color: var(--primary-color);
-}
-.contact-info a:hover {
-     color: var(--link-hover-color);
+    margin-bottom: 0.5rem;
 }
 
-/* --- استایل فرم تماس در حالت تیره --- */
-.contact-form label {
-    color: var(--text-color-secondary); /* رنگ لیبل‌ها */
-}
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--border-color); /* بوردر تیره */
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-family: inherit;
-    background-color: var(--bg-color); /* پس‌زمینه تیره برای فیلدها */
-    color: var(--text-color); /* رنگ متن داخل فیلدها */
-}
-/* استایل Placeholder */
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: var(--text-color-secondary);
-    opacity: 0.7;
-}
-.contact-form button {
-    margin-top: 10px;
+.company, .university {
+    color: var(--secondary-color);
+    font-weight: bold;
 }
 
-
-/* --- فوتر --- */
-#footer {
-    background: var(--card-bg); /* پس‌زمینه تیره برای فوتر */
-    color: var(--text-color-secondary); /* رنگ متن فوتر */
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px; 
-    border-top: 1px solid var(--border-color); /* خط جداکننده بالای فوتر */
-}
-#footer .social-links a {
-    color: var(--text-color-secondary); /* رنگ آیکون‌های اجتماعی */
-    margin: 0 10px;
-    font-size: 1.5rem;
-}
-#footer .social-links a:hover {
-    color: var(--primary-color); /* رنگ هاور آیکون‌ها */
+.date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
 }
 
-/* --- واکنش‌گرایی (Media Queries) --- */
-/* کدهای واکنش‌گرایی قبلی معمولاً نیاز به تغییر ندارند، مگر اینکه بخواهید 
-   رنگ پس‌زمینه منوی موبایل یا موارد مشابه را تنظیم کنید که بالاتر انجام شد. */
+/* استایل‌های پاسخگو */
 @media (max-width: 768px) {
-   /* ... کدهای واکنش‌گرایی قبلی ... */
+    body {
+        padding: 1rem;
+    }
 
-    /* اطمینان از پس‌زمینه تیره منوی موبایل */
-     #header .nav-links {
-         background-color: var(--card-bg); 
-     }
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
+
+/* استایل‌های چاپ */
+@media print {
+    body {
+        padding: 0;
+        background-color: white;
+    }
+
+    .resume-container {
+        box-shadow: none;
+    }
+
+    .experience-item:hover, .education-item:hover, .project-item:hover, .certification-item:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--text-color);
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
 }
