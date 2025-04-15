@@ -1,197 +1,106 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">  <head>
+<html lang="fa" dir="rtl">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="رزومه آنلاین [نام شما]، متخصص پردازش زبان طبیعی (NLP). شامل مهارت‌ها، تجربیات کاری، پروژه‌ها و تحصیلات.">
-    <meta name="keywords" content="رزومه, NLP, پردازش زبان طبیعی, یادگیری ماشین, پایتون, [نام شما], هوش مصنوعی">
-    <title>رزومه هومن عباسی - متخصص NLP</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css"> <link rel="stylesheet" href="./style.css">
-    </head>
-
+    <title>رزومه متخصص NLP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
+    <main class="resume-container">
+        <header class="resume-header">
+            <h1>نام و نام خانوادگی</h1>
+            <div class="contact-info">
+                <p>📧 ایمیل: your.email@example.com</p>
+                <p>📱 تلفن: ۰۹۱۲۳۴۵۶۷۸۹</p>
+                <p>📍 تهران، ایران</p>
+                <p>🔗 لینکدین: linkedin.com/in/yourprofile</p>
+                <p>🔗 گیت‌هاب: github.com/yourusername</p>
+            </div>
+        </header>
 
-    <header id="header">
-        <nav>
-            <div class="container">
-                <a href="#" class="logo">هومن عباسی</a>
-                <ul class="nav-links">
-                    <li><a href="#about">درباره من</a></li>
-                    <li><a href="#skills">مهارت‌ها</a></li>
-                    <li><a href="#experience">تجربه کاری</a></li>
-                    <li><a href="#projects">پروژه‌ها</a></li>
-                    <li><a href="#education">تحصیلات</a></li>
-                    <li><a href="#contact">تماس با من</a></li>
+        <section class="summary">
+            <h2>خلاصه</h2>
+            <p>متخصص پردازش زبان طبیعی با تجربه در توسعه مدل‌های زبانی و یادگیری ماشین. علاقه‌مند به حل مسائل پیچیده NLP و بهبود تعامل انسان-کامپیوتر.</p>
+        </section>
+
+        <section class="skills">
+            <h2>مهارت‌ها</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>مهارت‌های اصلی NLP</h3>
+                    <ul>
+                        <li>پردازش زبان طبیعی (NLP)</li>
+                        <li>یادگیری عمیق</li>
+                        <li>تحلیل احساسات</li>
+                        <li>استخراج اطلاعات</li>
+                        <li>مدل‌های زبانی</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>برنامه‌نویسی و ابزارها</h3>
+                    <ul>
+                        <li>Python (PyTorch, TensorFlow)</li>
+                        <li>NLTK, spaCy, Transformers</li>
+                        <li>SQL و پایگاه‌های داده</li>
+                        <li>Git و کنترل نسخه</li>
+                        <li>Linux و خط فرمان</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience">
+            <h2>تجربیات کاری</h2>
+            <div class="experience-item">
+                <h3>متخصص NLP ارشد</h3>
+                <p class="company">شرکت فناوری پیشرو</p>
+                <p class="date">۱۴۰۰ - اکنون</p>
+                <ul>
+                    <li>توسعه و پیاده‌سازی مدل‌های NLP برای پردازش متون فارسی</li>
+                    <li>بهبود دقت سیستم‌های تشخیص گفتار تا ۲۵٪</li>
+                    <li>مدیریت تیم ۵ نفره توسعه‌دهندگان NLP</li>
                 </ul>
-                <button class="menu-toggle">☰</button>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <h1>[نام شما]</h1>
-                <h2>متخصص پردازش زبان طبیعی (NLP)</h2>
-                <p class="tagline">محقق و توسعه‌دهنده مشتاق در حوزه‌ی پردازش زبان طبیعی (NLP) با تمرکز بر ساخت مدل‌های زبانی هوشمند و کاربردی‌سازی زبان انسانی در دنیای ماشین‌ها.</p>
-                <a href="#contact" class="btn btn-primary">تماس با من</a>
-                </div>
-        </section>
-
-        <section id="about" class="content-section">
-            <div class="container">
-                <h2><i class="fas fa-user"></i> درباره من</h2> <hr/>
-                <div class="about-content">
-                    <img src="assets/images/profile.jpg" alt="عکس پروفایل [نام شما]" class="profile-pic">
-                    <p>
-                      من یک توسعه‌دهنده و پژوهشگر مشتاق در حوزه‌ی پردازش زبان طبیعی (NLP) هستم که با علاقه‌مندی عمیق به زبان و هوش مصنوعی، به دنبال ساخت ابزارهایی هستم که درک ماشین از زبان انسان را به واقعیت نزدیک‌تر می‌کنند. آنچه مرا در این مسیر جذب کرده، توانایی NLP در تبدیل داده‌های خام متنی به بینشی قابل‌فهم و ارزشمند است.
-دوست دارم چالش‌هایی را حل کنم که نیاز به تحلیل عمیق زبان، طراحی مدل‌های زبانی مؤثر، و بهینه‌سازی تعامل بین انسان و ماشین دارند. هدفم این است که از تکنیک‌های پیشرفته یادگیری ماشین و مدل‌های زبان بزرگ (LLMs) برای توسعه راه‌حل‌هایی نوآورانه استفاده کنم که در دنیای واقعی کاربرد داشته باشند.      </p>
-                </div>
             </div>
         </section>
 
-        <section id="skills" class="content-section bg-light"> <div class="container">
-                <h2><i class="fas fa-cogs"></i> مهارت‌ها</h2> <hr/>
-                <p>مهارت‌های کلیدی من شامل پردازش زبان طبیعی (NLP)، یادگیری ماشین، تحلیل داده‌های متنی، و توسعه مدل‌های زبان بزرگ (LLMs) است. به‌ویژه در زمینه‌های تحلیل احساسات، طبقه‌بندی متن، و بهینه‌سازی مدل‌های زبانی تجربه دارم. همچنین با ابزارهای مختلف مانند Python، TensorFlow، PyTorch و NLTK آشنا هستم و به‌طور مداوم در حال به‌روز رسانی دانش خود در این حوزه پرتحول هستم.
-
-</p>
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h3>زبان‌های برنامه‌نویسی</h3>
-                        <ul>
-                            <li>پایتون (Python)</li>
-                            <li>SQL</li>
-                            </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>کتابخانه‌ها و فریمورک‌های NLP/ML</h3>
-                        <ul>
-                            <li>Hugging Face Transformers</li>
-                            <li>spaCy</li>
-                            <li>NLTK</li>
-                            <li>Scikit-learn</li>
-                            <li>TensorFlow / Keras</li>
-                            </ul>
-                    </div>
-                    <div class="skill-category">
-                        <h3>تکنیک‌های NLP</h3>
-                        <div class="skill-item">
-                            <span class="skill-name">تحلیل احساسات (Sentiment Analysis)</span>
-                            <div class="skill-bar"><div class="skill-level" style="width: 90%;"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">تشخیص موجودیت‌های نامدار (NER)</span>
-                            <div class="skill-bar"><div class="skill-level" style="width: 85%;"></div></div>
-                        </div>
-                        <div class="skill-item">
-                             <span class="skill-name">مدل‌سازی موضوعی (Topic Modeling)</span>
-                            <div class="skill-bar"><div class="skill-level" style="width: 80%;"></div></div>
-                        </div>
-                         <div class="skill-item">
-                             <span class="skill-name">ترجمه ماشینی (Machine Translation)</span>
-                             <div class="skill-bar"><div class="skill-level" style="width: 75%;"></div></div>
-                        </div>
-                        </div>
-                    <div class="skill-category">
-                        <h3>ابزارها و پلتفرم‌ها</h3>
-                        <ul>
-                            <li>Git / GitHub</li>
-                            <li>Docker</li>
-                            <li>Jupyter Notebooks</li>
-                            </ul>
-                    </div>
-                </div>
-                </div>
-        </section>
-
-        <section id="experience" class="content-section">
-            <div class="container">
-                <h2><i class="fas fa-briefcase"></i> تجربه کاری</h2> <hr/>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>[عنوان شغلی شما]</h3>
-                            <p class="company">[نام شرکت] | [مکان] | [تاریخ شروع] - [تاریخ پایان یا 'اکنون']</p>
-                            <ul>
-                                <li>[با استفاده از افعال کنشی (Action Verbs) دستاوردهای خود را شرح دهید. مثال: طراحی و پیاده‌سازی یک مدل NER برای استخراج اطلاعات کلیدی از متون حقوقی.]</li>
-                                <li>[در صورت امکان، نتایج را کمی کنید. مثال: کاهش زمان پردازش اسناد به میزان ۳۰٪ با استفاده از تکنیک‌های بهینه‌سازی NLP.]</li>
-                                <li>[تکنولوژی‌ها و ابزارهای اصلی که استفاده کردید را ذکر کنید.]</li>
-                                </ul>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>[عنوان شغلی قبلی]</h3>
-                            <p class="company">[نام شرکت قبلی] | [مکان] | [تاریخ شروع] - [تاریخ پایان]</p>
-                            <ul>
-                                <li>[دستاورد ۱]</li>
-                                <li>[دستاورد ۲]</li>
-                                </ul>
-                        </div>
-                    </div>
-                </div>
+        <section class="education">
+            <h2>تحصیلات</h2>
+            <div class="education-item">
+                <h3>کارشناسی ارشد هوش مصنوعی</h3>
+                <p class="university">دانشگاه تهران</p>
+                <p class="date">۱۳۹۸ - ۱۴۰۰</p>
+            </div>
+            <div class="education-item">
+                <h3>کارشناسی مهندسی کامپیوتر</h3>
+                <p class="university">دانشگاه صنعتی شریف</p>
+                <p class="date">۱۳۹۴ - ۱۳۹۸</p>
             </div>
         </section>
 
-        <section id="projects" class="content-section bg-light">
-            <div class="container">
-                <h2><i class="fas fa-project-diagram"></i> پروژه‌ها</h2> <hr/>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <img src="assets/images/project1.png" alt="تصویر پروژه ۱">
-                        <div class="project-info">
-                            <h3>[عنوان پروژه ۱]</h3>
-                            <p>[توضیح مختصری درباره پروژه، چالش آن و راهکار NLP ارائه شده.]</p>
-                            <p><strong>تکنولوژی‌ها:</strong> [Python, spaCy, Flask, ...]</p>
-                            <div class="project-links">
-                                <a href="[لینک GitHub Repo]" target="_blank" class="btn btn-secondary">کد منبع (GitHub)</a>
-                                </div>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        </div>
-                </div>
+        <section class="projects">
+            <h2>پروژه‌ها</h2>
+            <div class="project-item">
+                <h3>سیستم پردازش متن هوشمند</h3>
+                <p class="date">۱۴۰۱</p>
+                <p>توسعه سیستم تحلیل احساسات برای متون فارسی با استفاده از BERT</p>
+            </div>
+            <div class="project-item">
+                <h3>چت‌بات پشتیبانی مشتری</h3>
+                <p class="date">۱۴۰۰</p>
+                <p>پیاده‌سازی چت‌بات هوشمند با قابلیت پاسخگویی خودکار به سوالات متداول</p>
             </div>
         </section>
 
-        <section id="education" class="content-section">
-            <div class="container">
-                <h2><i class="fas fa-graduation-cap"></i> تحصیلات و گواهینامه‌ها</h2> <hr/>
-                 <div class="education-item">
-                     <h3>[نام مدرک تحصیلی] در [رشته تحصیلی]</h3>
-                     <p class="institution">[نام دانشگاه/موسسه] | [شهر] | [سال فارغ‌التحصیلی]</p>
-                     </div>
-                  <div class="education-item">
-                     <h3>[نام گواهینامه یا دوره آنلاین]</h3>
-                     <p class="institution">[نام موسسه ارائه‌دهنده] | [سال دریافت]</p>
-                     </div>
-                 </div>
-        </section>
-
-        <section id="contact" class="content-section bg-light">
-            <div class="container">
-                <h2><i class="fas fa-envelope"></i> تماس با من</h2> <hr/>
-                <p>[یک پیام کوتاه برای تشویق به تماس یا همکاری]</p>
-                <div class="contact-info">
-                     <p><i class="fas fa-envelope"></i> ایمیل: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-                     <p><i class="fab fa-linkedin"></i> لینکدین: <a href="[لینک پروفایل لینکدین شما]" target="_blank">پروفایل لینکدین</a></p>
-                     <p><i class="fab fa-github"></i> گیت‌هاب: <a href="[لینک پروفایل گیت‌هاب شما]" target="_blank">پروفایل گیت‌هاب</a></p>
-                     </div>
-
-                </div>
+        <section class="certifications">
+            <h2>گواهینامه‌ها</h2>
+            <div class="certification-item">
+                <h3>Deep Learning Specialization</h3>
+                <p>Coursera - دانشگاه Stanford</p>
+                <p class="date">۱۴۰۰</p>
+            </div>
         </section>
     </main>
-
-    <footer id="footer">
-        <div class="container">
-            <p>&copy; [سال جاری میلادی] [نام شما]. تمامی حقوق محفوظ است.</p>
-            <div class="social-links">
-                 <a href="[لینک لینکدین]" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                 <a href="[لینک گیت‌هاب]" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                 </div>
-        </div>
-    </footer>
-
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
